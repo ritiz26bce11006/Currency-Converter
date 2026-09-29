@@ -1,24 +1,30 @@
-Project title: World Currency Converter
+Project Title Currency Convertor
 
-Overview of the project:-
+Project overview:-
 
-This is a command-line Python application that calculates live currency exchange rates using the Frankfurter API. It provides a simple terminal interface for users to check rates, browse supported currencies, and track their conversion history during the session.
+This is a command line application written in python to calculate live currency exchange rate using Frankfurter API. It offers the user a simple terminal interface to check rates, browse supported currencies and keep track of conversion history during the session.
 
-Features:-
+Features: -
 
-•	Fetches real-time exchange rate data via HTTP requests.
-•	Displays a dictionary of global currencies alongside their standard symbols.
-•	Maintains a timestamped session history of all conversion
-•	Includes validation for user inputs and error handling for network timeouts.
 
-Technologies/tools used:-
+• Uses HTTP requests to get current exchange rate data.
 
-    Python 3.x
-    requests module
-    datetime module
-    Frankfurter API
+• Shows a list of world currencies with their common symbols.
 
-Steps to install & run the project:-
+• Keeps a time stamped session history of all conversions
+
+• Validates user input and handles network timeouts.
+
+Technologies/Tools Used:
+
+    3.x.x - Python.
+
+    - import urllib3
+
+    - datetime library
+    - API Frankfurt
+
+    Steps to install & run the project:-
 
 •	Clone this repository to your local machine.
 •	Ensure Python 3 is installed.
@@ -32,5 +38,4 @@ Steps to install & run the project:-
 •	Input valid currency codes (e.g., USD to JPY) and a positive amount. Verify the math matches the printed exchange rate.
 •	Input an invalid currency code (e.g., XXX) to ensure the system catches the invalid input and returns you to the menu.
 •	Input a negative amount to verify the negative value constraint works.
-•	Disconnect your internet and attempt a conversion to trigger and verify the requests.exceptions.RequestException network error       handling.
-
+•	Disconnect your internet and attempt a conversion to trigger and verify the requests.exceptions.RequestException network error handling.
