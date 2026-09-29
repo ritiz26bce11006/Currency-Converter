@@ -39,3 +39,9 @@ Technologies/Tools Used:
 •	Input an invalid currency code (e.g., XXX) to ensure the system catches the invalid input and returns you to the menu.
 •	Input a negative amount to verify the negative value constraint works.
 •	Disconnect your internet and attempt a conversion to trigger and verify the requests.exceptions.RequestException network error handling.
+
+##Screenshots
+
+<img width="925" height="475" alt="image" src="https://github.com/user-attachments/assets/d28b63ac-8969-4328-95b4-a66bb9f61131" />
+<img width="926" height="365" alt="image" src="https://github.com/user-attachments/assets/692d6945-97ce-4ca6-ba3b-17db83f2e25c" />
+<img width="926" height="352" alt="image" src="https://github.com/user-attachments/assets/0c4d92dd-78d7-4276-8ebf-4d97502883d9" />
