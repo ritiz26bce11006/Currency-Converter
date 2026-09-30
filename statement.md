@@ -1,18 +1,26 @@
-Problem statement:-
+# Project Statement
 
-Users frequently need quick access to accurate currency exchange rates but are often slowed down by opening web browsers and navigating ad-heavy financial websites. There is a need for a lightweight, terminal-based solution that executes calculations instantly.
-Scope of the project:
-The project encompasses a command-line interface that allows users to view supported currencies, perform live conversions via a public JSON API, and review their local search history. It does not include persistent database storage, user authentication, or graphical user interfaces. All source code and project files are organized, modular, and complete, packaged within a single executable script.
+## Problem Statement
+People who travel, study abroad, shop online or do business with other countries often need to know how much a foreign amount is worth in their own currency. Exchange rates change every day, so old rates from books or memory are not reliable. Many online converters are full of ads or are difficult to use. There is a need for a simple tool that gives the latest exchange rate quickly and remembers the previous conversions.
 
-Target users:-
+## Scope of the Project
+- A console (command line) application written in Python.
+- Converts money between 30 currencies using live rates from the Frankfurter API (European Central Bank data).
+- Includes a currency list, a search option and a saved conversion history.
+- Includes input validation, error handling, logging and unit tests.
+- Out of scope: graphical interface, historical rate charts, offline rates, cryptocurrency.
 
-* Software developers who prefer executing tasks within terminal environments.
-* Financial analysts or freelancers needing rapid spot-rate calculations.
-* Students learning basic Python API integrations and CLI loop structures.
+## Target Users
+- Students and travellers
+- Online shoppers who buy from foreign websites
+- Small business owners dealing with foreign clients
+- Beginners who want to learn how a Python project uses an API
 
-High-level features:-
-
-* Interactive command-line menu loop for continuous usage.
-* External API integration for accurate fiat conversion rates.
-* In-memory data structure for logging chronological conversion history.
-* Robust exception handling for API failures and malformed user inputs.
+## High-Level Features
+1. Convert an amount from one currency to another using the latest live rate.
+2. Show the list of all supported currencies with names and symbols.
+3. Search a currency by its name or code.
+4. Save the conversion history in a file and show it later.
+5. Clear the history.
+6. Validate all inputs and handle network errors without crashing.
+7. Write events and errors in a log file.
