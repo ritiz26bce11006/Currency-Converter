@@ -1,83 +1,35 @@
-# World Currency Converter
+Project title: World Currency Converter
 
-## Overview
-World Currency Converter is a console-based Python application that converts money from one currency to another using live exchange rates from the [Frankfurter API](https://www.frankfurter.app/). It also keeps a history of all conversions in a file, so the user can see them even after closing the program.
+Overview of the project:-
 
-This project was made for the VITyarthi *Build Your Own Project* evaluation.
+This is a command-line Python application that calculates live currency exchange rates using the Frankfurter API. It provides a simple terminal interface for users to check rates, browse supported currencies, and track their conversion history during the session.
 
-## Features
-- Live currency conversion between 30 currencies
-- Currency list with full names and symbols
-- Search currency by name or code
-- Conversion history saved in `history.json` (latest 50 conversions)
-- Clear history option
-- Input validation (wrong code, negative amount, text instead of number)
-- Error handling for no internet / API problems
-- Logging of events and errors in `app.log`
-- Unit tests
+Features:-
 
-## Technologies Used
-- Python 3.8 or above
-- `requests` library (calls the API)
-- `json`, `logging`, `datetime`, `math`, `os` (built-in modules)
-- `unittest` (testing)
-- Git and GitHub (version control)
+•	Fetches real-time exchange rate data via HTTP requests.
+•	Displays a dictionary of global currencies alongside their standard symbols.
+•	Maintains a timestamped session history of all conversion
+•	Includes validation for user inputs and error handling for network timeouts.
 
-## Project Structure
-```
-currency_converter/
-├── main.py              # menu and program loop
-├── converter.py         # conversion feature
-├── currencies.py        # currency data, list and search
-├── api_handler.py       # gets the rate from the API
-├── validator.py         # input checking
-├── history_manager.py   # saves / loads history
-├── logger_setup.py      # logging setup
-├── config.py            # settings
-├── requirements.txt
-├── statement.md
-├── tests/
-│   ├── test_validator.py
-│   ├── test_converter.py
-│   └── test_history.py
-├── docs/                # diagrams
-└── screenshots/
-```
+Technologies/tools used:-
 
-## How to Install and Run
-1. Install Python 3 from https://www.python.org
-2. Download or clone this repository:
-   ```
-   git clone <your-repository-link>
-   cd currency_converter
-   ```
-3. Install the required library:
-   ```
-   pip install -r requirements.txt
-   ```
-4. Run the program (internet is needed for conversion):
-   ```
-   python main.py
-   ```
+    Python 3.x
+    requests module
+    datetime module
+    Frankfurter API
 
-## How to Use
-1. Choose `1` for conversion, then enter the FROM code (e.g. `USD`), TO code (e.g. `INR`) and the amount.
-2. Choose `2` to see all supported currency codes.
-3. Choose `3` to search, for example `yen` or `eur`.
-4. Choose `4` to see the history, `5` to clear it, `6` to exit.
+Steps to install & run the project:-
 
-## How to Run the Tests
-From the main project folder run:
-```
-python -m unittest discover -s tests -t . -v
-```
-The tests check the validator, the calculation, the search and the history file. They do not need internet.
+•	Clone this repository to your local machine.
+•	Ensure Python 3 is installed.
+•	Install the required external library by running: pip install requests
+•	Run the script from your terminal: python main.py
+  
 
-Manual test cases (need internet) are listed in the project report.
+   Instructions for testing:-
 
-## Screenshots
-Add your screenshots in the `screenshots/` folder.
-
-## Author
-Name: <your name>  
-Registration No.: <your reg no>
+•	Launch the script and select option 1 from the main menu.
+•	Input valid currency codes (e.g., USD to JPY) and a positive amount. Verify the math matches the printed exchange rate.
+•	Input an invalid currency code (e.g., XXX) to ensure the system catches the invalid input and returns you to the menu.
+•	Input a negative amount to verify the negative value constraint works.
+•	Disconnect your internet and attempt a conversion to trigger and verify the requests.exceptions.RequestException network error handling.
